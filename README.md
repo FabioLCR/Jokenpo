@@ -47,7 +47,7 @@ Considerando um `dicionário` com três jogadores e suas respectivas jogadas:
 var jogadores = new Dictionary<string, JogadaEnum>
 {
     { "Fábio", JogadaEnum.Pedra },
-    { "Letícia", JogadaEnum.Tesoura },
+    { "Letícia", JogadaEnum.Spock },
     { "Leon", JogadaEnum.Papel }
 };
 ```
@@ -56,11 +56,29 @@ Neste caso:
 - A narrativa seria:
   - `Pedra quebra Tesoura`
   - `Papel cobre Pedra`
+  - `Papel refuta Spock`
 
 - **Resultado final**:
   - `Leon` seria o ganhador (já que sua jogada não foi vencida por ninguém).
   - `Fábio` e `Letícia` seriam os perdedores (pois suas jogadas foram vencidas).
 
+- **Resultado no console**:
+    ```bash
+    --------------------------------------------------
+                        NARRATIVAS DO JOGO
+    --------------------------------------------------
+    - Spock vaporiza Pedra
+    - Papel cobre Pedra
+    - Papel refuta Spock
+
+    --------------------------------------------------
+    Leon venceu o jogo!!!
+    --------------------------------------------------
+
+    --------------------------------------------------
+    Fábio e Letícia perderam o jogo!
+    --------------------------------------------------
+    ```
 Outro exemplo, se as jogadas fossem:
 
 ```csharp
@@ -80,40 +98,23 @@ var jogadores = new Dictionary<string, JogadaEnum>
 - **Resultado final**:
   - Todos os jogadores seriam considerados perdedores, portanto o resultado seria um **empate total**.
 
-## Exemplo de Saída no Console
+- **Resultado no console**:
+    ```bash
+    --------------------------------------------------
+                      NARRATIVAS DO JOGO
+    --------------------------------------------------
+    - Spock vaporiza Pedra
+    - Papel cobre Pedra
+    - Papel refuta Spock
 
-Para o primeiro exemplo com `"Fábio"`, `"Letícia"` e `"Leon"`, o resultado seria apresentado assim:
+    --------------------------------------------------
+    Leon venceu o jogo!!!
+    --------------------------------------------------
 
-```bash
---------------------------------------------------
-                  NARRATIVAS DO JOGO
---------------------------------------------------
-- Pedra quebra Tesoura
-- Papel cobre Pedra
-
---------------------------------------------------
-Leon venceu o jogo!!!
---------------------------------------------------
-
---------------------------------------------------
-Letícia e Fábio perderam o jogo!
---------------------------------------------------
-```
-
-Para o segundo exemplo, o resultado seria apresentado assim:
-
-```bash
---------------------------------------------------
-                  NARRATIVAS DO JOGO
---------------------------------------------------
-- Papel cobre Pedra
-- Tesoura corta Papel
-- Pedra quebra Tesoura
-
---------------------------------------------------
-                    EMPATE!
---------------------------------------------------
-```
+    --------------------------------------------------
+    Fábio e Letícia perderam o jogo!
+    --------------------------------------------------
+    ```
 
 ## Requisitos do Software
 

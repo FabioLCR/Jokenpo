@@ -4,14 +4,14 @@
     {
         static void Main()
         {
-            var jogadoresPorJogada = new Dictionary<string, JogadaEnum>
+            var jogadores = new Dictionary<string, JogadaEnum>
             {
-                { "Jogador3", JogadaEnum.Papel },
-                { "Jogador1", JogadaEnum.Pedra },
-                { "Jogador2", JogadaEnum.Tesoura },
+                { "Fábio", JogadaEnum.Pedra },
+                { "Letícia", JogadaEnum.Papel },
+                { "Leon", JogadaEnum.Tesoura }
             };
 
-            JogarJokenpo(jogadoresPorJogada);
+            JogarJokenpo(jogadores);
         }
 
         private static string FormatarJogadores(IReadOnlyList<string> itens)
